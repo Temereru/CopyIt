@@ -1,0 +1,14 @@
+ {
+  "name": "Copy It",
+  "version": "1.2",
+  "description": "adds a copy to clipvoard button to 'pre' tags",
+  "background": {"page": "background.html", "persistent": false},
+  "manifest_version": 2,
+  "permissions":["clipboardWrite"],
+  "content_scripts": [ {
+    "js": [ "jquery-1.12.2.min.js", "background.js" ],
+    "matches": [ "http://*/*", "https://*/*"],
+    "tun_at": "document_end",
+    "all_frames": true
+  }]
+}
