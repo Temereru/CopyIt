@@ -1,8 +1,7 @@
 $(document).ready(function(){
-	console.log('start')
-	console.log($('pre'))
 	var btn = '<button class="copy">copy</button>';
-	$('pre').append(btn);
+	var create = function(){$('pre').append(btn);}
+	setTimeout(create,500);
 	$(document).on('click','.copy',function(e){
 		e.preventDefault();
 		var pre = $(this).parent().text();
